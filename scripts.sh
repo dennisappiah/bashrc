@@ -30,6 +30,27 @@ download-mars () {
   scp -r -i "$marspem" "$marsusername@$marshost":"$1" ~/Downloads/
 }
 
+windows-downloads () {
+  cd /mnt/c/Users/kofid/Downloads/
+}
+
+mongo-start(){
+  sudo systemctl start mongod
+}
+
+mongo-stop(){
+  sudo systemctl stop mongod
+}
+
+mongo-status(){
+  sudo systemctl status mongod
+}
+
+mogo-restart(){
+  sudo systemctl restart mongod
+}
+
+
 # ------------------------------- #
 
 # ----------------------------------------- #
