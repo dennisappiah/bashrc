@@ -1,5 +1,6 @@
 #----------Envonment Variables -------- #
 export PS1="\[\033[01;32m\](\u)\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] "
+export PATH="$PATH:$HOME/.local/bin"
 #------------------------------------------ #
 
 #----------- Aliases configuration --------- #
