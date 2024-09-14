@@ -2,7 +2,24 @@
 export PS1="\[\033[01;32m\](\u)\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] "
 #------------------------------------------ #
 
-#----------- Aliases --------- #
+#----------- Aliases configuration --------- #
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
+# ------------- AUTO-COMPLETION ----------------------- #
+# enable programmable completion features (you don't need to enable this if  is already enabled in
+# /etc/bash.bashrc and /etc/profile
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+#----------- Aliases examples--------- #
 alias ls="ls -G"
 alias ll="ls -l -a"
 alias bconfig="vim ~/.bashrc && source ~/.bashrc"
